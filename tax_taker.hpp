@@ -6,14 +6,13 @@
 *                people as specificed from the program earlier       *
 *********************************************************************/
 void taxTaker(std::vector<TaxPayer> &person){
-
    std::cout << "Please enter the tax information for " << SIZE << " tax payers:\n\n";
 
    for(int i = 0; i < SIZE; ++i){
       // Create an instance in the vector of the structure
       person.push_back(TaxPayer());
 
-      // Collect information from the user to be processed
+      // Collect information from the user
       std::cout << "Enter the income for tax payer " << i+1 << ": ";
       std::cin >> person[i].income;
       std::cout << "Enter the tax rate for tax payer " << i+1 << ": ";
