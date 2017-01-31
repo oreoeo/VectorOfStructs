@@ -6,7 +6,7 @@
 *                people as specificed from the program earlier       *
 *********************************************************************/
 void taxTaker(std::vector<TaxPayer> &person){
-   std::cout << "Please enter the tax information for " << SIZE << " tax payers:\n\n";
+   std::cout << "\nPlease enter the tax information for " << SIZE << " tax payers:\n\n";
 
    for(int i = 0; i < SIZE; ++i){
       // Create an instance in the vector of the structure
@@ -15,8 +15,11 @@ void taxTaker(std::vector<TaxPayer> &person){
       // Collect information from the user
       std::cout << "Enter the income for tax payer " << i+1 << ": ";
       std::cin >> person[i].income;
+
       std::cout << "Enter the tax rate for tax payer " << i+1 << ": ";
       std::cin >> person[i].taxRate;
+      // Cannot properly validate the data
+
       std::cout << "\n";
 
       // Divide by 100 to correct rate not being a percentage
@@ -24,5 +27,4 @@ void taxTaker(std::vector<TaxPayer> &person){
    }
    return;
 }
-
 #endif
